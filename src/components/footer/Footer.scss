@@ -1,0 +1,14 @@
+@import '../../App.scss';
+
+.footer {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+
+}

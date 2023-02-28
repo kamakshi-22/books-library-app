@@ -1,0 +1,48 @@
+@import '../../App.scss';
+
+.header {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+
+    a{
+        text-decoration: none;
+        outline: none;
+        border: none;
+        background: none;
+        color: inherit;
+        font: inherit;
+    }
+
+    .header__logo {
+        flex: 1;
+        padding-left: 2%;
+        font-size: 2rem;       
+    }
+
+    .header__nav {
+        flex: 1;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 2%;
+
+        .nav__item {
+            padding: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            
+            &:hover,
+            &:active,
+            &:focus  {
+                color: $primary;
+            }
+        }
+    }
+}
+
