@@ -7,7 +7,9 @@ export const Header = () => {
         <div class="header">
             <Link to="/" className="header__logo">
                 <img src={logo} alt="logo" className="header__logo-img"/>
-                <div className='header__logo-title'>Books Library</div>
+                <div className='header__logo-title'>
+                    welcome to the library ˏˋ°•*⁀➷
+                </div>
             </Link>
         </div>
     )

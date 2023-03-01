@@ -33,12 +33,12 @@
 
         @media screen and (min-width: 768px) {
             left: 6rem;
-            bottom: -6rem;
+            bottom: -4rem;
         }
 
         @media screen and (min-width: 1024px) {
             left: 8rem;
-            bottom: -8rem;
+            bottom: -6rem;
         }
 
         .header__logo-img {
@@ -52,14 +52,14 @@
 
         .header__logo-title {
             color: $color-light;
-            text-transform: uppercase;
+            text-transform: capitalize;
             letter-spacing: 0.1rem;
             text-shadow: 0 0 0.1rem $color-light;
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             padding-left: 1rem;
 
             @media screen and (min-width: 768px) {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
         }
 

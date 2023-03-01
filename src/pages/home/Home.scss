@@ -1,37 +1,77 @@
 @import '../../App.scss';
 
-.home{
-    padding: 2rem;
+.home {
+    margin: 8rem 0 0 3rem;
+    padding-right: 0.5rem;
     display: flex;
-    height: 100vh;
-    .left-trending-section{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        border-right: 1px solid $color-light;
-        padding-right: 1rem;
-        .trending-title{
-            font-size: 1.5rem;
-            font-weight: 600;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        margin: 8rem 0 0 7rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin: 10rem 0 0 9rem;
+        flex-direction: row;
+    }
+
+    .trending-section {
+        padding-right: 2rem;
+        @media screen and (min-width: 1024px){
+            border-right: 3px solid $color-light;
         }
-        .trending-list{
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            flex: 1;
-            padding: 1rem 0;
-            color: $color-primary;           
-            .trending-item{
-                cursor: pointer;
+
+        .trending-title{
+            font-size: 2rem;
+            font-weight: 600;
+            color: $color-primary;
+            margin: 0 0 2rem 0;
+
+        }
+
+        .trending-list {
+            margin: 1rem 0;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 1rem;
+                li {
+                    flex: 1;
+                    list-style: none;
+                    text-align: left;
+                    text-transform: capitalize;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: $color-secondary;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+
+                    img{
+                        display: none;
+                        @media screen and (min-width: 1024px) {
+                            display: block;
+                            width: 18rem;
+                            height: 12rem;
+                        }
+                        
+                    }
+                }
             }
         }
     }
-    .right-search-section{
-        width: 100%;
-        .search-header{
-            border-bottom: 1px solid $color-light;
-            padding: 0 0 3rem 0;
-            padding-left: 2rem;
-        }
+
+    .search-section {
+        flex:1;
+        padding-right: 2rem;
+        // width: 100%;
+        // .search-header{
+        //     border-bottom: 1px solid $color-light;
+        //     padding: 0 0 3rem 0;
+        //     padding-left: 2rem;
+        // }
     }
 }

@@ -1,2 +1,37 @@
 @import '../../App.scss';
 
+.searchbar-form-books {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid $color-light;
+    width: calc(100% - 5rem);
+
+    @media screen and (min-width: 1024px) {
+        width: calc(100%);
+    }
+
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $color-light;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+        background-color: transparent;
+        padding: 10px;
+
+        ion-icon {
+            cursor: pointer;
+            color: $color-primary;
+        }
+    }
+
+}
