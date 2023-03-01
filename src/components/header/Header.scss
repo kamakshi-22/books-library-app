@@ -2,13 +2,18 @@
 
 .header {
     width: 100%;
-    min-height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
+    min-height: 16vh;
+    background-image: url(/assets/images/header.jpeg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    position: relative;
 
-    a{
+    @media screen and (min-width: 768px) {
+        min-height: 32vh;
+    }
+
+    a {
         text-decoration: none;
         outline: none;
         border: none;
@@ -18,31 +23,49 @@
     }
 
     .header__logo {
-        flex: 1;
-        padding-left: 2%;
-        font-size: 2rem;       
-    }
-
-    .header__nav {
-        flex: 1;
-        font-size: 1.2rem;
+        position: absolute;
+        bottom: -5rem;
+        left: 2rem;
+        z-index: 1;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        padding-right: 2%;
+        flex-direction: column;
+        align-items: start;
 
-        .nav__item {
-            padding: 0 10px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            
-            &:hover,
-            &:active,
-            &:focus  {
-                color: $primary;
+        @media screen and (min-width: 768px) {
+            left: 6rem;
+            bottom: -6rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: 8rem;
+            bottom: -8rem;
+        }
+
+        .header__logo-img {
+            width: auto;
+            height: 100px;
+
+            @media screen and (min-width: 768px) {
+                height: 140px;
             }
         }
-    }
-}
 
+        .header__logo-title {
+            color: $color-light;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            text-shadow: 0 0 0.1rem $color-light;
+            font-size: 1.8rem;
+            padding-left: 1rem;
+
+            @media screen and (min-width: 768px) {
+                font-size: 2.5rem;
+            }
+        }
+
+
+
+    }
+
+
+}

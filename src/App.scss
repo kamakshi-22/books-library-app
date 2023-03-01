@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
 
-$light: #fff;
-$dark: #000;
-$primary: #f2c94c;
+$color-light: #fff;
+$color-dark: #1a1a24;
+$color-primary: #f55d5c;
+$color-secondary: #928b85;
 
 *,
 *::before,
@@ -14,17 +15,17 @@ $primary: #f2c94c;
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: $dark;
-    color: $light;
-    text-transform: capitalize;
+    background-color: $color-dark;
+    color: $color-light;
     font-weight: 800;
-    letter-spacing: 3px;
     height: 100vh;
 }
 
-a,button,select,textarea,input{
+a,
+button,
+select,
+textarea,
+input {
     font-family: inherit;
     font-weight: inherit;
 }
-
-

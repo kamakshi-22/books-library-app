@@ -1,3 +1,37 @@
 @import '../../App.scss';
 
-
+.home{
+    padding: 2rem;
+    display: flex;
+    height: 100vh;
+    .left-trending-section{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-right: 1px solid $color-light;
+        padding-right: 1rem;
+        .trending-title{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .trending-list{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex: 1;
+            padding: 1rem 0;
+            color: $color-primary;           
+            .trending-item{
+                cursor: pointer;
+            }
+        }
+    }
+    .right-search-section{
+        width: 100%;
+        .search-header{
+            border-bottom: 1px solid $color-light;
+            padding: 0 0 3rem 0;
+            padding-left: 2rem;
+        }
+    }
+}
