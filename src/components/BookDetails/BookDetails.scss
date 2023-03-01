@@ -1,0 +1,45 @@
+@import '../../App.scss';
+
+.bookDetails{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid $color-light;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        thead{
+            tr{
+                background-color: rgba($color-primary, 0.9);
+                th{
+                    padding: 12px 15px;
+                    text-align: left;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                    color: $color-light;
+                }
+            }
+        }
+        tr{
+            th{
+                padding: 12px 15px;
+                text-align: left;
+                font-weight: 500;
+                font-size: 1.2rem;
+                color: $color-light;
+            }
+            td{
+                padding: 12px 15px;
+                text-align: left;
+                font-weight: 400;
+                font-size: 1rem;
+                color: $color-light;
+            }
+        }
+    }
+}
