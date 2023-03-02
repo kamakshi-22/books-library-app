@@ -9,6 +9,7 @@ import thriller from '../../assets/images/trending/thriller.jpeg';
 import horror from '../../assets/images/trending/horror.jpeg';
 import memoirs from '../../assets/images/trending/memoirs.jpeg';
 import { BookDetails } from '../../components/BookDetails/BookDetails';
+import { Header } from '../../components/Header/Header'
 
 export const Home = () => {
     const [searchTerm, setSearchTerm] = useState("");

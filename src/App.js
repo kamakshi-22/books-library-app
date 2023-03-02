@@ -5,7 +5,15 @@ import { Home } from './pages/Home/Home';
 
 function App() {
   return (
-    <Home />
+    <div>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/books-library-app" element={<Home />}/>
+          <Route path="*" element={<h1>404</h1>} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

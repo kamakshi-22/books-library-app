@@ -5,7 +5,7 @@ import logo from "../../assets/images/logo.png";
 export const Header = () => {
     return (
         <div class="header">
-            <Link to="/" className="header__logo">
+            <Link to="/books-library-app" className="header__logo">
                 <img src={logo} alt="logo" className="header__logo-img"/>
                 <div className='header__logo-title'>
                     welcome to the library ˏˋ°•*⁀➷
