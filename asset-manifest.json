@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/books-library-app/static/css/main.3999371a.css",
-    "main.js": "/books-library-app/static/js/main.0ace4c94.js",
+    "main.js": "/books-library-app/static/js/main.f94969ad.js",
     "static/media/logo.png": "/books-library-app/static/media/logo.3d0a147215a32a2eb716.png",
     "static/media/thriller.jpeg": "/books-library-app/static/media/thriller.73ad05bf77e6568ce00f.jpeg",
     "static/media/horror.jpeg": "/books-library-app/static/media/horror.dabaf259a6226abfdf9b.jpeg",
@@ -11,10 +11,10 @@
     "static/media/fantasy.jpeg": "/books-library-app/static/media/fantasy.35a94e1933f035c32492.jpeg",
     "index.html": "/books-library-app/index.html",
     "main.3999371a.css.map": "/books-library-app/static/css/main.3999371a.css.map",
-    "main.0ace4c94.js.map": "/books-library-app/static/js/main.0ace4c94.js.map"
+    "main.f94969ad.js.map": "/books-library-app/static/js/main.f94969ad.js.map"
   },
   "entrypoints": [
     "static/css/main.3999371a.css",
-    "static/js/main.0ace4c94.js"
+    "static/js/main.f94969ad.js"
   ]
 }
