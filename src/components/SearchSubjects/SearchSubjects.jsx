@@ -1,10 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import { BookDetails } from '../BookDetails/BookDetails';
+import { Pagination } from '../Pagination/Pagination';
+import { SubjectsAPI } from '../../pages/SubjectsAPI';
 import './SearchSubjects.scss'
-export const SearchSubjects = ({ onSearch, selectedTrendingSubject, setSelectedTrendingSubject }) => {
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
+export const SearchSubjects = ({
+    onSearch,
+    selectedTrendingSubject,
+    setSelectedTrendingSubject,
+    searchTerm,
+    setSearchTerm,
+    errorMessage,
+    setErrorMessage,
+    isLoading,
+    setIsLoading,
+    offset,
+    setOffset,
+    limit,
+    bookSearchTerm, 
+    setBookSearchTerm,
+}) => {
 
     //make the search key visible in the search box
     const handleSearchInputChange = (event) => {
@@ -17,46 +32,51 @@ export const SearchSubjects = ({ onSearch, selectedTrendingSubject, setSelectedT
         setErrorMessage("");
     }
 
-    /** using the Search API */
-    const searchBooks = async (searchTerm, offset) => {
-        const url = `http://openlibrary.org/subjects/${searchTerm}.json?limit=10`;
-        console.log(url);
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(data.name);
-        return data;
-    }
 
     useEffect(() => {
+        setIsLoading(true);
         if (selectedTrendingSubject) {
-            searchBooks(selectedTrendingSubject, 0)
+            SubjectsAPI(selectedTrendingSubject, offset, limit)
                 .then((data) => {
+                    setIsLoading(true);
                     onSearch(data);
+                    setErrorMessage("");
+                    setSearchTerm("");
+                    setIsLoading(false);
+                    setBookSearchTerm("");
                 })
                 .catch((error) => {
                     console.error(error);
                     setErrorMessage("No results found.");
+                    setIsLoading(false);
                 });
+        } else {
+            setErrorMessage("");
+            setIsLoading(false);
         }
     }, [selectedTrendingSubject]);
 
-    // handle the submit event of the form
+
+    //handle the submit event of the form
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('submitted');
-        console.log(searchTerm);
-
+        setErrorMessage("");
+        setIsLoading(true);
         try {
-            const data = await searchBooks(searchTerm, 0);
-            console.log(data.name);
+            const data = await SubjectsAPI(searchTerm, offset, limit);
+            setIsLoading(true);
             onSearch(data);
-            // Do something with the API response data
+            setErrorMessage("");
+            setSelectedTrendingSubject("");
+            setIsLoading(false);
+            setBookSearchTerm("");
         } catch (error) {
             console.error(error);
+            setIsLoading(false);
             setErrorMessage("No results found.");
-            // Handle the API call error
         }
     };
+
     return (
         <div>
             <form className='search-form-subjects' onSubmit={handleSubmit}>
@@ -67,6 +87,7 @@ export const SearchSubjects = ({ onSearch, selectedTrendingSubject, setSelectedT
 
             </form>
             <div className='container'>
+                {isLoading && <p>Loading...</p>}
                 {errorMessage && <p>{errorMessage}</p>}
                 {searchTerm &&
                     <button type='button' onClick={handleClearSearch}>

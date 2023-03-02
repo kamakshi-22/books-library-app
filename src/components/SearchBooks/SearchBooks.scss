@@ -1,14 +1,11 @@
 @import '../../App.scss';
 
-.searchbar-form-books {
+.search-form-books {
     display: flex;
     gap: 1rem;
     border-bottom: 1px solid $color-light;
-    width: calc(100% - 5rem);
+    width: calc(60% - 5rem);
 
-    @media screen and (min-width: 1024px) {
-        width: calc(100%);
-    }
 
     input {
         box-sizing: border-box;
@@ -16,23 +13,37 @@
         padding: 10px;
         font-size: 16px;
         font-weight: 400;
-        border: none;
+        border:none;
         outline: none;
         background-color: transparent;
         color: $color-light;
     }
 
-    button {
-        border: none;
-        outline: none;
-        font-size: 1.2rem;
-        background-color: transparent;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    p{
+        font-size: 1rem;
+        font-weight: 400;
+        color: $color-primary !important;
         padding: 10px;
-
-        ion-icon {
-            cursor: pointer;
-            color: $color-primary;
-        }
     }
+}
 
+button{
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    ion-icon{
+        cursor: pointer;
+        color: $color-primary;
+    }
 }
