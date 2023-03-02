@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Books Library App
+- This application allows users to search for books using the Open Library Subjects and Search APIs.
+- Users can enter search terms or select a subject to browse, and the app will display a list of books matching the search criteria. 
+- Users can also paginate through the results.
+
+![image](https://user-images.githubusercontent.com/55135926/222428570-1c99bb76-c746-425a-a0ab-d6a51cb8dd5e.png)
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
