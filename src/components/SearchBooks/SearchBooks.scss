@@ -4,8 +4,15 @@
     display: flex;
     gap: 1rem;
     border-bottom: 1px solid $color-light;
-    width: calc(60% - 5rem);
+    width: 80%;
 
+    @media screen and (min-width: 768px) {
+        width: calc(100% - 5rem);
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: calc(60% - 5rem);
+    }
 
     input {
         box-sizing: border-box;
@@ -13,7 +20,7 @@
         padding: 10px;
         font-size: 16px;
         font-weight: 400;
-        border:none;
+        border: none;
         outline: none;
         background-color: transparent;
         color: $color-light;
@@ -21,12 +28,13 @@
 
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    p{
+
+    p {
         font-size: 1rem;
         font-weight: 400;
         color: $color-primary !important;
@@ -34,7 +42,7 @@
     }
 }
 
-button{
+button {
     border: none;
     outline: none;
     font-size: 1.2rem;
@@ -42,7 +50,8 @@ button{
     padding: 10px;
     display: flex;
     align-items: center;
-    ion-icon{
+
+    ion-icon {
         cursor: pointer;
         color: $color-primary;
     }

@@ -20,7 +20,9 @@ export const SearchSubjects = ({
     bookSearchTerm,
     setBookSearchTerm,
     setPageErrorMessage,
-    setBookData
+    setBookData,
+    setSearchTitle,
+    setTotalBooks
 }) => {
 
     //make the search key visible in the search box
@@ -49,6 +51,8 @@ export const SearchSubjects = ({
                     setIsLoading(false);
                     setBookSearchTerm("");
                     setPageErrorMessage("");
+                    setSearchTitle(selectedTrendingSubject);
+                    setTotalBooks(data.work_count);
                 })
                 .catch((error) => {
                     console.error(error);
@@ -78,6 +82,8 @@ export const SearchSubjects = ({
             setIsLoading(false);
             setBookSearchTerm("");
             setPageErrorMessage("");
+            setSearchTitle(searchTerm);
+            setTotalBooks(data.work_count);
         } catch (error) {
             console.error(error);
             setIsLoading(false);

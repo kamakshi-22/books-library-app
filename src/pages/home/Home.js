@@ -55,7 +55,6 @@ export const Home = () => {
 
     const [offset, setOffset] = useState(0);
     const [limit, setLimit] = useState(12);
-
     return (
         <div className='home'>
             <div className='trending-section'>
@@ -78,6 +77,8 @@ export const Home = () => {
                     pageErrorMessage={pageErrorMessage}
                     setPageErrorMessage={setPageErrorMessage}
                     setBookData={setBookData}
+                    setSearchTitle={setSearchTitle}
+                    setTotalBooks={setTotalBooks}
                 />
                 <div className='trending-list'>
                     <ul>
@@ -122,16 +123,18 @@ export const Home = () => {
                         pageErrorMessage={pageErrorMessage}
                         setPageErrorMessage={setPageErrorMessage}
                         setBookData={setBookData}
+                        setSearchTitle={setSearchTitle}
+                        setTotalBooks={setTotalBooks}
                     />
                 </div>
                 <div className='search-results'>
                     <h2>Search Results</h2>
-                    {/* {bookData.length > 0 && (
+                    {bookData.length > 0 && (
                         <p>
-                            Found {totalBooks} result{totalBooks !== 1 ? "s" : ""} for{" "}
-                            <span>"{bookSearchTerm ? bookSearchTerm : searchTerm}"</span>
+                            Found {totalBooks} result{totalBooks !== 1 ? "s" : ""} for
+                            <span>" {searchTitle} "</span>
                         </p>
-                    )} */}
+                    )}
 
                     <BookDetails bookData={bookData} />
                 </div>

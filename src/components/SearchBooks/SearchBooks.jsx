@@ -17,7 +17,9 @@ export const SearchBooks = (
         setSearchTerm,
         pageErrorMessage,
         setPageErrorMessage,
-        setBookData
+        setBookData,
+        setSearchTitle,
+        setTotalBooks
     }
 ) => {
 
@@ -48,6 +50,8 @@ export const SearchBooks = (
             setSearchTerm("");
             setPageErrorMessage("");
             setOffset(0);
+            setSearchTitle(bookSearchTerm);
+            setTotalBooks(data.numFound);
         } catch (error) {
             console.error(error);
             setBookErrorMessage("No results found.");
