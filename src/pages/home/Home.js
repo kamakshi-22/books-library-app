@@ -24,6 +24,7 @@ export const Home = () => {
     const [bookErrorMessage, setBookErrorMessage] = useState('');
     const [bookIsLoading, setBookIsLoading] = useState(false);
 
+    const [pageErrorMessage, setPageErrorMessage] = useState('');
     const handleSearch = (data) => {
         const books = data.works.map((book) => {
             return {
@@ -73,6 +74,9 @@ export const Home = () => {
                     offset={offset}
                     setOffset={setOffset}
                     limit={limit}
+                    pageErrorMessage={pageErrorMessage}
+                    setPageErrorMessage={setPageErrorMessage}
+                    setBookData={setBookData}
                 />
                 <div className='trending-list'>
                     <ul>
@@ -114,6 +118,9 @@ export const Home = () => {
                         offset={offset}
                         setOffset={setOffset}
                         limit={limit}
+                        pageErrorMessage={pageErrorMessage}
+                        setPageErrorMessage={setPageErrorMessage}
+                        setBookData={setBookData}
                     />
                 </div>
                 <div className='search-results'>
@@ -135,7 +142,10 @@ export const Home = () => {
                     selectedTrendingSubject={selectedTrendingSubject}
                     searchTerm={searchTerm}
                     onSearch={handleSearch}
-                    setErrorMessage={setErrorMessage}
+                    onBookSearch={handleSearchBooks}
+                    bookSearchTerm={bookSearchTerm}
+                    pageErrorMessage={pageErrorMessage}
+                    setPageErrorMessage={setPageErrorMessage}
                 />
 
             </div>

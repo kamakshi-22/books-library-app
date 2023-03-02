@@ -15,6 +15,9 @@ export const SearchBooks = (
         limit,
         searchTerm,
         setSearchTerm,
+        pageErrorMessage,
+        setPageErrorMessage,
+        setBookData
     }
 ) => {
 
@@ -34,14 +37,17 @@ export const SearchBooks = (
         e.preventDefault();
         setBookErrorMessage("");
         setBookIsLoading(true);
+        setBookData("")
         try {
-            const data = await SearchAPI(bookSearchTerm);
+            const data = await SearchAPI(bookSearchTerm, offset, limit);
             setBookIsLoading(true);
             console.log(data);
             onBookSearch(data);
             setBookErrorMessage("");
             setBookIsLoading(false);
             setSearchTerm("");
+            setPageErrorMessage("");
+            setOffset(0);
         } catch (error) {
             console.error(error);
             setBookErrorMessage("No results found.");
@@ -51,7 +57,7 @@ export const SearchBooks = (
     return (
         <div>
             <form className='search-form-books' onSubmit={handleSubmit}>
-                <input type='text' placeholder='Search Subjects' value={bookSearchTerm} onChange={handleSearchInputChange} />
+                <input type='text' placeholder='Search Book By Titles or By Author' value={bookSearchTerm} onChange={handleSearchInputChange} />
                 <button type='submit'>
                     <ion-icon name='search'></ion-icon>
                 </button>

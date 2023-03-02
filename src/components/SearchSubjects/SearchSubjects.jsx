@@ -17,8 +17,10 @@ export const SearchSubjects = ({
     offset,
     setOffset,
     limit,
-    bookSearchTerm, 
+    bookSearchTerm,
     setBookSearchTerm,
+    setPageErrorMessage,
+    setBookData
 }) => {
 
     //make the search key visible in the search box
@@ -35,6 +37,8 @@ export const SearchSubjects = ({
 
     useEffect(() => {
         setIsLoading(true);
+        setBookData("");
+        setOffset(0);
         if (selectedTrendingSubject) {
             SubjectsAPI(selectedTrendingSubject, offset, limit)
                 .then((data) => {
@@ -44,6 +48,7 @@ export const SearchSubjects = ({
                     setSearchTerm("");
                     setIsLoading(false);
                     setBookSearchTerm("");
+                    setPageErrorMessage("");
                 })
                 .catch((error) => {
                     console.error(error);
@@ -62,6 +67,8 @@ export const SearchSubjects = ({
         e.preventDefault();
         setErrorMessage("");
         setIsLoading(true);
+        setBookData("");
+        setOffset(0);
         try {
             const data = await SubjectsAPI(searchTerm, offset, limit);
             setIsLoading(true);
@@ -70,6 +77,7 @@ export const SearchSubjects = ({
             setSelectedTrendingSubject("");
             setIsLoading(false);
             setBookSearchTerm("");
+            setPageErrorMessage("");
         } catch (error) {
             console.error(error);
             setIsLoading(false);

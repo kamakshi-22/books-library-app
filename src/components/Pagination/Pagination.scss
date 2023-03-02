@@ -4,7 +4,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 3rem;
-    margin: 2rem 0;
+    margin: 1rem 0 0 0;
     padding: 0.5rem 0;
     border-radius: 0.5rem;
 
@@ -23,4 +23,13 @@
             color: $color-primary;
         }
     }
+
+    
+}
+.error{
+    color: $color-primary;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
