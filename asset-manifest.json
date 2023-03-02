@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/books-library-app/static/css/main.3999371a.css",
+    "main.js": "/books-library-app/static/js/main.7f3dbdba.js",
+    "static/media/logo.png": "/books-library-app/static/media/logo.3d0a147215a32a2eb716.png",
+    "static/media/thriller.jpeg": "/books-library-app/static/media/thriller.73ad05bf77e6568ce00f.jpeg",
+    "static/media/horror.jpeg": "/books-library-app/static/media/horror.dabaf259a6226abfdf9b.jpeg",
+    "static/media/memoirs.jpeg": "/books-library-app/static/media/memoirs.c254992af676b332b368.jpeg",
+    "static/media/romance.jpeg": "/books-library-app/static/media/romance.5bcca92a3737c62ec0a4.jpeg",
+    "static/media/header.jpeg": "/books-library-app/static/media/header.8ec952f30357cf40212b.jpeg",
+    "static/media/fantasy.jpeg": "/books-library-app/static/media/fantasy.35a94e1933f035c32492.jpeg",
+    "index.html": "/books-library-app/index.html",
+    "main.3999371a.css.map": "/books-library-app/static/css/main.3999371a.css.map",
+    "main.7f3dbdba.js.map": "/books-library-app/static/js/main.7f3dbdba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3999371a.css",
+    "static/js/main.7f3dbdba.js"
+  ]
+}
