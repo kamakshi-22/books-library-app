@@ -1,5 +1,5 @@
 # Books Library App
-- This application allows users to search for books using the Open Library Subjects and Search APIs.
+- This is a fully responsive application that allows users to search for books using the Open Library Subjects and Search APIs.
 - Users can enter search terms or select a subject to browse, and the app will display a list of books matching the search criteria. 
 - Users can also paginate through the results and view book details.
 
