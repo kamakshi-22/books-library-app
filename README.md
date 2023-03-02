@@ -1,10 +1,9 @@
 # Books Library App
 - This application allows users to search for books using the Open Library Subjects and Search APIs.
 - Users can enter search terms or select a subject to browse, and the app will display a list of books matching the search criteria. 
-- Users can also paginate through the results.
+- Users can also paginate through the results and view book details.
 
-![image](https://user-images.githubusercontent.com/55135926/222428570-1c99bb76-c746-425a-a0ab-d6a51cb8dd5e.png)
-
+![image](https://user-images.githubusercontent.com/55135926/222453265-02bcb004-f5ac-457f-9282-e65f211c5edd.png)
 
 ## Getting Started with Create React App
 
